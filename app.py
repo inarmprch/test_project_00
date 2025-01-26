@@ -10,9 +10,15 @@ Original file is located at
 import streamlit as st
 import random
 
+st.set_page_config(layout="wide")
 st.title('Test Streamlit')
-st.write('Hello Guys!')
 
-if st.button('Generate Random Number'):
-    random_number = random.randint(1, 100)
-    st.write(f'Random Number: {random_number}')
+col1_1, col2_2 = st.columns(2)
+with col1_1;
+    st.header("AAAAAA")
+with col1_2;
+    st.header("BBBBBB")
+
+col2_1, col2_2 = st.colimns([3,1], border=True)
+col2_1.header("CCCCCC")
+col2_2.header("DDDDDD")
